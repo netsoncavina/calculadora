@@ -15,7 +15,7 @@
     <title>Calculadora</title>
   </head>
   <body>
-    <nav class="navbar bg-light">
+    <!-- <nav class="navbar bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -28,7 +28,7 @@
           Calculadora
         </a>
       </div>
-    </nav>
+    </nav> -->
 
     <div class="grid">
       <div>
@@ -98,8 +98,30 @@
         </div>
       </div>
       <div class="column">
-        <button class="btn btn-primary" type="button" id="button-addon2">
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="button-addon2"
+          onclick="mostrarHistorico()"
+        >
           Mostrar historico de cálculos
+        </button>
+        <div id="historico" class="historico">
+          <div class="retorno">
+            <p>1º Calculo</p>
+            <span>Calculo: 2+2</span>
+            <span>Resultado: 4</span>
+            <span>Autor: Netson</span>
+            <span>Data: 05/11/2022</span>
+          </div>
+          <div class="retorno">
+            <p>1º Calculo</p>
+            <span>Calculo: 2+2</span>
+            <span>Resultado: 4</span>
+            <span>Autor: Netson</span>
+            <span>Data: 05/11/2022</span>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -39,3 +39,46 @@ function mudaSinais() {
   array = array.join("");
   entrada.value = array;
 }
+
+async function getHistorico() {
+  const response = await fetch("http://localhost:3000/", {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
+  const data = await response.json();
+  return data;
+}
+
+function mostrarHistorico() {
+  let historico = document.getElementById("historico");
+  getHistorico().then((data) => {
+    historico.innerHTML = `
+    <table>
+      <tr>
+        <th>Entrada</th>
+        <th>Saida</th>
+        <th>Autor</th>
+        <th>Data</th>
+      </tr>
+      ${data
+        .map(
+          (item) => `
+      <tr>
+        <td>${item.entrada}</td>
+        <td>${item.saida}</td>
+        <td>${item.autor}</td>
+        <td>${item.data}</td>
+      </tr>
+    `
+        )
+        .join("")}
+    </table>
+    `;
+  });
+}
+
+getHistorico();
