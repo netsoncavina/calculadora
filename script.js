@@ -14,7 +14,7 @@ function limpa() {
 }
 
 function substituiX() {
-  return entrada.value.replace(/X/g, "*");
+  return entrada.value.replace(/x/g, "*");
 }
 
 function calcula() {
