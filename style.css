@@ -8,7 +8,7 @@
 }
 
 .calculadora {
-  padding-top: 74px;
+  padding-top: 50px;
   /* margin-top: 3rem; */
   margin-left: auto;
   margin-right: auto;
@@ -26,11 +26,20 @@
   margin-left: auto;
   margin-right: auto;
   width: 15rem;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
-  /* background-color: #1a1919; */
+  background-color: #1a1919;
   border: none;
   text-align: right;
+}
+
+.entrada {
+  color: white;
+}
+
+.saida {
+  color: #b8b8b8;
 }
 
 /* .campo:hover {
