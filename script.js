@@ -5,6 +5,7 @@ const botao = document.getElementsByName("botao");
 for (let i = 0; i < botao.length; i++) {
   botao[i].addEventListener("click", function () {
     entrada.value += botao[i].innerHTML;
+    calcula();
   });
 }
 
