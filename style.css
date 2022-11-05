@@ -1,0 +1,76 @@
+.input {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.calculadora {
+  padding-top: 74px;
+  /* margin-top: 3rem; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 17rem;
+  height: 32rem;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1919;
+}
+
+.campo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #1a1919; */
+  border: none;
+  text-align: right;
+}
+
+/* .campo:hover {
+  background-color: #504e4e;
+  border: none;
+} */
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.botao {
+  width: 45px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  background: #343434;
+  border-radius: 9px;
+  /* font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 44px; */
+  color: #ffffff;
+}
+
+.clear {
+  background-color: #ff5959;
+  color: #343434;
+}
+
+.operacao {
+  color: #66ff7f;
+}
+
+.igual {
+  background-color: #66ff7f;
+  color: #343434;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./src/calculator-svgrepo-com.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Calculadora
+        </a>
+      </div>
+    </nav>
+    <div class="input-group mb-3 input">
+      <span class="input-group-text" id="basic-addon1">Nome</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nome de usuario"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+
+    <div class="calculadora">
+      <input
+        type="text"
+        class="form-control campo"
+        placeholder=""
+        aria-label="entrada"
+        id="entrada"
+        aria-describedby="basic-addon1"
+      />
+      <input
+        type="text"
+        class="form-control campo"
+        placeholder=""
+        aria-label="saida"
+        id="saida"
+        aria-describedby="basic-addon1"
+      />
+      <div class="botoes">
+        <button type="button" class="botao clear" onclick="limpa()">C</button>
+        <button type="button" class="botao operacao" name="botao">(</button>
+        <button type="button" class="botao operacao" name="botao">)</button>
+        <button type="button" class="botao operacao" name="botao">/</button>
+      </div>
+      <div class="botoes">
+        <button type="button" class="botao" name="botao">7</button>
+        <button type="button" class="botao" name="botao">8</button>
+        <button type="button" class="botao" name="botao">9</button>
+        <button type="button" class="botao operacao" name="botao">X</button>
+      </div>
+      <div class="botoes">
+        <button type="button" class="botao" name="botao">4</button>
+        <button type="button" class="botao" name="botao">5</button>
+        <button type="button" class="botao" name="botao">6</button>
+        <button type="button" class="botao operacao" name="botao">-</button>
+      </div>
+      <div class="botoes">
+        <button type="button" class="botao" name="botao">1</button>
+        <button type="button" class="botao" name="botao">2</button>
+        <button type="button" class="botao" name="botao">3</button>
+        <button type="button" class="botao operacao" name="botao">+</button>
+      </div>
+      <div class="botoes">
+        <button type="button" class="botao" name="botao">+/-</button>
+        <button type="button" class="botao" name="botao">0</button>
+        <button type="button" class="botao" name="botao">.</button>
+        <button type="button" class="botao igual" onclick="calcula()">=</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
