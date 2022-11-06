@@ -86,6 +86,19 @@ function mostrarHistorico() {
   });
 }
 
+// function toggleHistorico() {
+//   let historico = document.getElementById("historico");
+//   let btnHistorico = document.getElementById("button-historico");
+//   mostrarHistorico();
+//   if (historico.style.display === "none") {
+//     historico.style.display = "block";
+//     btnHistorico.innerHTML = "Esconder historico de cálculos";
+//   } else {
+//     historico.style.display = "none";
+//     btnHistorico.innerHTML = "Mostrar historico de cálculos";
+//   }
+// }
+
 function postCalculo() {
   const data_criacao =
     new Date().getUTCFullYear() +
@@ -112,6 +125,8 @@ function postCalculo() {
 function validaPost() {
   if (userName.value === "") {
     alert("Digite seu nome");
+  } else if (entrada.value === "") {
+    alert("Digite uma conta");
   } else {
     postCalculo();
     mostrarHistorico();
