@@ -109,4 +109,13 @@ function postCalculo() {
   });
 }
 
-getHistorico();
+function validaPost() {
+  if (userName.value === "") {
+    alert("Digite seu nome");
+  } else {
+    postCalculo();
+    mostrarHistorico();
+  }
+}
+
+// getHistorico();
