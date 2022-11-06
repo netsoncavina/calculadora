@@ -2,6 +2,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import calculosRouter from "./routes/calculos.js";
 // import { add, subtract, multiply, divide } from "./calculator.js";
 
 const app = express();
@@ -31,6 +32,8 @@ app.get("/", (req, res) => {
   ];
   res.send(historico);
 });
+
+app.use("/calculos", calculosRouter);
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
