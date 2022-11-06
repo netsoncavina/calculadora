@@ -41,7 +41,7 @@ function mudaSinais() {
 }
 
 async function getHistorico() {
-  const response = await fetch("http://localhost:3000/", {
+  const response = await fetch("http://localhost:3000/calculos", {
     method: "GET",
     mode: "cors",
     headers: {
@@ -68,10 +68,14 @@ function mostrarHistorico() {
         .map(
           (item) => `
       <tr>
-        <td>${item.entrada}</td>
-        <td>${item.saida}</td>
+        <td>${item.conta}</td>
+        <td>${item.resultado}</td>
         <td>${item.autor}</td>
-        <td>${item.data}</td>
+        <td>${item.data_criacao
+          .substring(0, 10)
+          .split("-")
+          .reverse()
+          .join("/")}</td>
       </tr>
     `
         )
