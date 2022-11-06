@@ -1,6 +1,7 @@
 const entrada = document.querySelector("#entrada");
 const saida = document.querySelector("#saida");
 const botao = document.getElementsByName("botao");
+const userName = document.getElementById("userName");
 
 for (let i = 0; i < botao.length; i++) {
   botao[i].addEventListener("click", function () {
@@ -82,6 +83,29 @@ function mostrarHistorico() {
         .join("")}
     </table>
     `;
+  });
+}
+
+function postCalculo() {
+  const data_criacao =
+    new Date().getUTCFullYear() +
+    "-" +
+    (new Date().getUTCMonth() + 1) +
+    "-" +
+    new Date().getUTCDate();
+  fetch("http://localhost:3000/calculos", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+    body: JSON.stringify({
+      conta: entrada.value,
+      resultado: saida.value,
+      autor: userName.value,
+      data_criacao: data_criacao,
+    }),
   });
 }
 

@@ -15,12 +15,12 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const sqlQuery =
-      "INSERT INTO calculos (entrada, saida, autor, data) VALUES (?, ?, ?, ?)";
+      "INSERT INTO calculos (conta, resultado, autor, data_criacao) VALUES (?, ?, ?, ?)";
     const result = await pool.query(sqlQuery, [
-      req.body.entrada,
-      req.body.saida,
+      req.body.conta,
+      req.body.resultado,
       req.body.autor,
-      req.body.data,
+      req.body.data_criacao,
     ]);
     res.status(200).json(result);
   } catch (err) {
