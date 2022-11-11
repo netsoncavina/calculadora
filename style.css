@@ -113,6 +113,10 @@
   color: #ffffff;
 }
 
+#button-historico:hover {
+  background-color: #424242;
+}
+
 .clear {
   background-color: #ff5959;
   color: #343434;
