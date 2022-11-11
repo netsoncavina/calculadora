@@ -86,18 +86,22 @@ function mostrarHistorico() {
   });
 }
 
-// function toggleHistorico() {
-//   let historico = document.getElementById("historico");
-//   let btnHistorico = document.getElementById("button-historico");
-//   mostrarHistorico();
-//   if (historico.style.display === "none") {
-//     historico.style.display = "block";
-//     btnHistorico.innerHTML = "Esconder historico de cálculos";
-//   } else {
-//     historico.style.display = "none";
-//     btnHistorico.innerHTML = "Mostrar historico de cálculos";
-//   }
-// }
+function esconderHistorico() {
+  let historico = document.getElementById("historico");
+  historico.innerHTML = "";
+}
+
+function toggleHistorico() {
+  let historico = document.getElementById("historico");
+  let botaoHistorico = document.getElementById("button-historico");
+  if (historico.innerHTML === "") {
+    mostrarHistorico();
+    botaoHistorico.innerHTML = "Esconder histórico de cálculos";
+  } else {
+    esconderHistorico();
+    botaoHistorico.innerHTML = "Mostrar histórico de cálculos";
+  }
+}
 
 function postCalculo() {
   const data_criacao =
