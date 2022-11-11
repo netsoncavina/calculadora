@@ -130,6 +130,8 @@ function validaPost() {
   } else {
     postCalculo();
     mostrarHistorico();
+    entrada.value = saida.value;
+    saida.value = "";
   }
 }
 
