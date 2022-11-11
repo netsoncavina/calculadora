@@ -128,9 +128,15 @@ function postCalculo() {
 
 function validaPost() {
   if (userName.value === "") {
-    alert("Digite seu nome");
+    Swal.fire({
+      title: "Atenção!",
+      text: "É necessário informar um nome de usuário!",
+    });
   } else if (entrada.value === "") {
-    alert("Digite uma conta");
+    Swal.fire({
+      title: "Atenção!",
+      text: "É necessário informar uma conta a ser calculada!",
+    });
   } else {
     postCalculo();
     mostrarHistorico();
@@ -138,5 +144,3 @@ function validaPost() {
     saida.value = "";
   }
 }
-
-// getHistorico();
